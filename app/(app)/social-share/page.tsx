@@ -78,8 +78,8 @@ const socialFormats = {
 
 
     return (
-        <div className="container mx-auto p-4 max-w-4xl">
-          <h1 className="text-3xl font-bold mb-6 text-center">
+        <div className="container mx-auto p-4 sm:px-6 lg:px-8 py-6 max-w-5xl">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-center">
             Social Media Image Creator
           </h1>
 
@@ -124,13 +124,14 @@ const socialFormats = {
 
                   <div className="mt-6 relative">
                     <h3 className="text-lg font-semibold mb-2">Preview:</h3>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center w-full overflow-hidden">
                       {isTransforming && (
                         <div className="absolute inset-0 flex items-center justify-center bg-base-100 bg-opacity-50 z-10">
                           <span className="loading loading-spinner loading-lg"></span>
                         </div>
                       )}
                       <CldImage
+                        className="max-w-full h-auto rounded-xl"
                         width={socialFormats[selectedFormat].width}
                         height={socialFormats[selectedFormat].height}
                         src={uploadedImage}
@@ -138,7 +139,7 @@ const socialFormats = {
                         alt="transformed image"
                         crop="fill"
                         aspectRatio={socialFormats[selectedFormat].aspectRatio}
-                        gravity='auto'
+                        gravity="auto"
                         ref={imageRef}
                         onLoad={() => setIsTransforming(false)}
                         />
@@ -146,7 +147,7 @@ const socialFormats = {
                   </div>
 
                   <div className="card-actions justify-end mt-6">
-                    <button className="btn btn-primary" onClick={handleDownload}>
+                    <button className="btn btn-primary w-full sm:w-auto" onClick={handleDownload}>
                       Download for {selectedFormat}
                     </button>
                   </div>
