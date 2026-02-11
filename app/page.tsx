@@ -58,7 +58,9 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold mb-4">🎥 Video Resizer</h2>
+          <h2 className="text-3xl font-bold mb-4 transition-transform duration-300 hover:scale-105 hover:text-white">
+  🎥 Video Resizer
+</h2>
           <p className="text-gray-300 mb-4">
             Resize your videos for Instagram, YouTube, and Shorts in one click.  
             No watermark. No quality loss.
@@ -66,7 +68,6 @@ export default function Home() {
           <ul className="text-gray-400 space-y-2 text-sm">
             <li>✔ Resize for reels & shorts</li>
             <li>✔ Fast cloud processing</li>
-            <li>✔ Works on mobile & desktop</li>
           </ul>
         </motion.div>
 
@@ -118,7 +119,6 @@ export default function Home() {
           </p>
           <ul className="text-gray-400 space-y-2 text-sm">
             <li>✔ Auto crop for social media</li>
-            <li>✔ Compress without losing quality</li>
             <li>✔ Preview before upload</li>
           </ul>
         </motion.div>

@@ -73,7 +73,7 @@ const  VideoCard: React.FC<VideoCardProps> = ({video, onDownload}) => {
 
       return (
         <div
-          className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300"
+          className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 w-full max-w-sm mx-auto sm:max-w-none"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -89,7 +89,7 @@ const  VideoCard: React.FC<VideoCardProps> = ({video, onDownload}) => {
                   autoPlay
                   muted
                   loop
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto aspect-video object-cover"
                   onError={handlePreviewError}
                 />
               )
@@ -97,7 +97,7 @@ const  VideoCard: React.FC<VideoCardProps> = ({video, onDownload}) => {
               <img
                 src={getThumbnailUrl(video.publicId)}
                 alt={video.title}
-                className="w-full h-full object-cover"
+                className="w-full h-auto aspect-video object-cover"
               />
             )}
             <div className="absolute bottom-2 right-2 bg-base-100 bg-opacity-70 px-2 py-1 rounded-lg text-sm flex items-center">
@@ -105,8 +105,8 @@ const  VideoCard: React.FC<VideoCardProps> = ({video, onDownload}) => {
               {formatDuration(video.duration)}
             </div>
           </figure>
-          <div className="card-body p-4">
-            <h2 className="card-title text-lg font-bold">{video.title}</h2>
+          <div className="card-body p-3 sm:p-4">
+            <h2 className="card-title text-base sm:text-lg font-bold break-words">{video.title}</h2>
             <p className="text-sm text-base-content opacity-70 mb-4">
               {video.description}
             </p>

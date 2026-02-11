@@ -50,7 +50,7 @@ export default function AppLayout({
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
         <header className="w-full bg-base-200">
-          <div className="navbar max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="navbar max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex-wrap">
             <div className="flex-none lg:hidden">
               <label
                 htmlFor="sidebar-drawer"
@@ -59,18 +59,18 @@ export default function AppLayout({
                 <MenuIcon />
               </label>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 min-w-0">
               <Link href="/" onClick={handleLogoClick}>
                 <div className="btn btn-ghost normal-case text-2xl font-bold tracking-tight cursor-pointer">
                   Cloudinary Showcase
                 </div>
               </Link>
             </div>
-            <div className="flex-none flex items-center space-x-4">
+            <div className="flex-none flex flex-col sm:flex-row items-end sm:items-center gap-2 sm:gap-4 max-w-full">
               {user && (
                 <>
                   <div className="avatar">
-                    <div className="w-8 h-8 rounded-full">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full">
                       <img
                         src={user.imageUrl}
                         alt={
@@ -79,7 +79,7 @@ export default function AppLayout({
                       />
                     </div>
                   </div>
-                  <span className="text-sm truncate max-w-xs lg:max-w-md">
+                  <span className="text-xs sm:text-sm truncate max-w-[90px] sm:max-w-xs lg:max-w-md">
                     {user.username || user.emailAddresses[0].emailAddress}
                   </span>
                   <button

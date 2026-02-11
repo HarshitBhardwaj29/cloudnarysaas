@@ -122,7 +122,7 @@ const socialFormats = {
                     </select>
                   </div>
 
-                  <div className="mt-6 relative">
+                  <div className="mt-6 relative ">
                     <h3 className="text-lg font-semibold mb-2">Preview:</h3>
                     <div className="flex justify-center w-full overflow-hidden">
                       {isTransforming && (
