@@ -18,7 +18,7 @@
     "filesize": "^11.0.2",
     "framer-motion": "^12.34.0",
     "lucide-react": "^0.536.0",
-    "next": "15.3.3",
+    "next": "^16.1.6",
     "next-cloudinary": "^6.16.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
